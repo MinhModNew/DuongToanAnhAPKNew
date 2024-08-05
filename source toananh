@@ -4069,7 +4069,5 @@ if player=='8':
 	    
 	    input("\33[1;31m\\" + "—" * 58 + "/\n" + Fore.RESET)
 
-if player =='7':
-	print("\033[96m Hiệu Ứng Sáng Đậm🐧")
    
 	
