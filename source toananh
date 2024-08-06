@@ -1110,7 +1110,7 @@ if player =="4":
 		    print("\33[1;31m\\"+"—"*58+"/\n" + Fore.RESET)
 if player=='5':
 	
-	leorpack=input('\033[90m (Mod Lẻ)/1 ; (Mod Pack Trang Phục)/2 :🐧 ')
+	leorpack=input('\033[90m (Mod Lẻ)/1 ; (Mod Pack Trang Phục)/2 : ')
 	if leorpack=='1':
 		VMODCHECK = '2' #input("MODCHECK - (SKIN -> HERO)/1; (bEqua)/2 :") 
 	elif leorpack=='2':
