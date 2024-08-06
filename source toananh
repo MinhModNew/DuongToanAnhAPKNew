@@ -1,4 +1,74 @@
 #nguồn dương toán anh zalo : 0359602989 YTB EricMODAOV
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
+#con chó NAM ngu lồn
 #tôi đéo hiểu sao bạn lại đi trộm sources của người khác trong khi bạn có thể tự code ra 1 sources còn xịn hơn tôi
 #con người cứ đi rình rập rồi trộm sources thôi
 #cho dù t mã hoá 2 lớp vẫn cố giải ra để trộm đéo hiểu vì sao luôn súc vật vl
@@ -416,7 +486,7 @@ if player=="3":
 	    return count
 	def thaycode(file_path, codes):
 	    for codeA in codes:
-	        if b'_MMN_' in codeA:
+	        if b'_DUONGTOANANH_' in codeA:
 	            continue
 	        with open(file_path, 'rb') as file:
 	            code_all = file.read()
@@ -487,11 +557,11 @@ if player=="3":
 	            ID = ID.encode()
 	            IDSKIN = IDSKIN.encode()        
 	            
-	            HERONAME = b'_MMN_'+hero1.encode()
+	            HERONAME = b'_DUONGTOANANH_'+hero1.encode()
 	            Hero = ID + HERONAME
-	            CODECHECKBIENVE=b'\r\n    <Track trackName="MMN" eventType="CheckSkinIdTick" guid="'+Hero+b'" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">\r\n      <Event eventName="CheckSkinIdTick" time="0.000" isDuration="false" guid="Eric MOD AOV">\r\n        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />\r\n        <int name="skinId" value="'+ID+b'" refParamName="" useRefParam="false" />\r\n      </Event>\r\n    </Track>'
+	            CODECHECKBIENVE=b'\r\n    <Track trackName="DUONGTOANANH" eventType="CheckSkinIdTick" guid="'+Hero+b'" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">\r\n      <Event eventName="CheckSkinIdTick" time="0.000" isDuration="false" guid="Eric MOD AOV">\r\n        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />\r\n        <int name="skinId" value="'+ID+b'" refParamName="" useRefParam="false" />\r\n      </Event>\r\n    </Track>'
 	
-	            action_name = '\r\n    <Track trackName="MMN" eventType="CheckSkinIdTick" guid="'+Hero.decode()+'"'
+	            action_name = '\r\n    <Track trackName="DUONGTOANANH" eventType="CheckSkinIdTick" guid="'+Hero.decode()+'"'
 	            track_count = count_tracks_above_action_name(file_path, action_name)
 	            condition = track_count
 	
@@ -519,7 +589,7 @@ if player=="3":
 	                        if b'<String name="eventName"' in track_text:
 	                            B.append(track_text)
 	                for codeA in A:
-	                    if b'_MMN_' in codeA:
+	                    if b'_DUONGTOANANH_' in codeA:
 	                        continue
 	                    with open(file_path, 'rb') as file:
 	                        code_all = file.read()
@@ -533,7 +603,7 @@ if player=="3":
 	                for codeB in B:
 	                    with open(file_path, 'rb') as file:
 	                        code_all = file.read()
-	                    if b'_MMN_' in codeB:
+	                    if b'_DUONGTOANANH_' in codeB:
 	                        continue
 	                    codeC = codeB.decode().split('\r\n')
 	                    for i in codeC:
@@ -777,7 +847,7 @@ if player=="3":
 	
 	    ID,IDSKIN=DS_ID1[i],DS_ID2[i]
 	    #print(ID)
-	    HERONAME = b'_MMN_'+hero1.encode()
+	    HERONAME = b'_DUONGTOANANH_'+hero1.encode()
 	    Hero = ID.encode() + HERONAME    
 	    with open(file_name, 'rb') as file:
 	        codefiles = file.read()
@@ -788,7 +858,7 @@ if player=="3":
 	
 	for i in range(soskin):
 	    ID,IDSKIN=DS_ID1[i],DS_ID2[i]
-	    HERONAME = b'_MMN_'+hero1.encode()
+	    HERONAME = b'_DUONGTOANANH_'+hero1.encode()
 	    Hero = ID.encode() + HERONAME    
 	    codebv1 = codebv.replace(b'TriggerParticleTick0', Hero)
 	    action_name = '<Track trackName="CheckSkinIdTick0" eventType="CheckSkinIdTick" guid="'+Hero.decode()
