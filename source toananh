@@ -4166,7 +4166,7 @@ if player=='7':
 	    input("\33[1;31m\\" + "—" * 58 + "/\n" + Fore.RESET)
 
 
-
+################################################################################################################################
 
 import webbrowser
 if player=="8":
@@ -4179,8 +4179,8 @@ if player=="8":
     else:
         print("Lựa chọn không hợp lệ.")
 
-if __name__ == "__main__":
-    open_website()
+   if __name__ == "__main__":
+       open_website()
 
    
 	
