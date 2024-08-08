@@ -104,7 +104,7 @@ if __name__ == "__main__":
     except KeyboardInterrupt:
         sys.stdout.write('\r \033[95m Coder BY Eric MOD AOV       \n')
         sys.stdout.flush()
-    print("\n Coder Duong Toan Anh...")
+    print("\n Coder Duong Toán Anh...")
     time.sleep(2)
     player= input("           \033[96mChọn Chức Năng : " )
 if player =="1":
@@ -119,6 +119,7 @@ if player =="1":
 	    color = colors[i % len(colors)] 
 	    print(color + logo[i] + '\033[0m')  
 	print(Fore.LIGHTRED_EX + "\tLàm Nét Skill 🐧 ")
+	print(Fore.LIGHTRED_EX + "\t      Cách Sử Dụng\nNhập Thư Mục Cần Mod\n eg : 150_Hanxin/skill\nNhững Tướng Được Chức Năng Này Bảo Hộ Hiệu Ứng Sẽ HD Ngay Cấu Hình Thấp🐧 ")
 	init(autoreset=True)
 	def process_file(file_path, skin=".prefab"):
 	    try:
@@ -169,6 +170,7 @@ if player=="2":
 
 
 	print(Fore.RED + '\t Hiệu Ứng Thập Cẩm + Hiêụ Ứng Sáng Đậm ' + Fore.RESET)
+	print(Fore.LIGHTRED_EX + "\t      Cách Sử Dụng\nNhập Thư Mục Cần Mod\n eg : 150_Hanxin/skill🐧 ")
 	print(Fore.YELLOW + '-'*60 + Fore.RESET)
 	print("[!] \033[93m Chọn Chế Độ")
 	print("  \033[90m[1] Thập Cẩm")
@@ -212,7 +214,7 @@ if player=="2":
 	            return_trackName = return_trackName + trackName1
 	        return trackName + return_trackName
 	
-	    id_name = input("➡ Nhập Thư Mục E: ")
+	    id_name = input("➡ Nhập Thư Mục : ")
 	    all_skinid0 = input("\n➡ Nhập List Id Skin: ")
 	
 	    AllSkinid0_list = all_skinid0.split(' ')
@@ -1031,28 +1033,28 @@ if player =="4":
 		
 		    for file_path in os.listdir(o):
 		        if file_path.endswith("S2.xml"):
-		            replace_text(o + file_path, '<int name="skinId" value="13011" refParamName="" useRefParam="false" />\n        <bool name="bEqual" value="true" refParamName="" useRefParam="false" />', '')
+		            number_of_replacements = replace_text(file_path, '<int name="skinId" value="13011" refParamName="" useRefParam="false" />\n        <bool name="bEqual" value="true" refParamName="" useRefParam="false" />', '')
 		        elif file_path.endswith("S2B1.xml"):
-		            replace_text(o + file_path, '<TemplateObject name="targetId" id="2" objectName="bullet" isTemp="true" refParamName="" useRefParam="false" />', '<TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />\n<TemplateObject name="objectSpaceId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />')
+		            number_of_replacements = replace_text(file_path, '<TemplateObject name="targetId" id="2" objectName="bullet" isTemp="true" refParamName="" useRefParam="false" />', '<TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />\n<TemplateObject name="objectSpaceId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />')
 		        elif file_path.endswith("S2B1_13011.xml"):
-		            replace_text(o + file_path, '<int name="skinId" value="13011" refParamName="" useRefParam="false" />', '<int name="skinId" value="99911" refParamName="" useRefParam="false" />\n        <bool name="bEqual" value="false" refParamName="" useRefParam="false"/>')
+		            number_of_replacements = replace_text(file_path, '<int name="skinId" value="13011" refParamName="" useRefParam="false" />', '<int name="skinId" value="99911" refParamName="" useRefParam="false" />\n        <bool name="bEqual" value="false" refParamName="" useRefParam="false"/>')
 		        elif file_path.endswith("S2B2_13011.xml"):
-		            replace_text(o + file_path, '<int name="skinId" value="13011" refParamName="" useRefParam="false" />', '<int name="skinId" value="99911" refParamName="" useRefParam="false" />\n        <bool name="bEqual" value="false" refParamName="" useRefParam="false"/>')
+		            number_of_replacements = replace_text(file_path, '<int name="skinId" value="13011" refParamName="" useRefParam="false" />', '<int name="skinId" value="99911" refParamName="" useRefParam="false" />\n        <bool name="bEqual" value="false" refParamName="" useRefParam="false"/>')
 		        elif file_path.endswith("S2B3_13011.xml"):
-		            replace_text(o + file_path, '<int name="skinId" value="13011" refParamName="" useRefParam="false" />', '<int name="skinId" value="99911" refParamName="" useRefParam="false" />\n        <bool name="bEqual" value="false" refParamName="" useRefParam="false"/>')
+		            number_of_replacements = replace_text(file_path, '<int name="skinId" value="13011" refParamName="" useRefParam="false" />', '<int name="skinId" value="99911" refParamName="" useRefParam="false" />\n        <bool name="bEqual" value="false" refParamName="" useRefParam="false"/>')
 		        elif file_path.endswith("S21.xml"):
-		            replace_text(o + file_path, '<int name="skinId" value="13011" refParamName="" useRefParam="false" />\n        <bool name="bEqual" value="true" refParamName="" useRefParam="false" />', '<int name="skinId" value="99911" refParamName="" useRefParam="false" />\n        <bool name="bEqual" value="false" refParamName="" useRefParam="false" />')
-		            replace_text(o + file_path, '<Track trackName="TriggerParticleTick1" eventType="TriggerParticleTick" guid="a07302eb-cb3b-4146-9996-d018f92247aa" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">', '<Track trackName="TriggerParticleTick1" eventType="TriggerParticleTick" guid="a07302eb-cb3b-4146-9996-d018f92247aa" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">')
-		            replace_text(o + file_path, 'GongBenWuZang_attack01_spell01_2', 'GongBenWuZang_attack01_spell01_1')
+		            number_of_replacements = replace_text(file_path, '<int name="skinId" value="13011" refParamName="" useRefParam="false" />\n        <bool name="bEqual" value="true" refParamName="" useRefParam="false" />', '<int name="skinId" value="99911" refParamName="" useRefParam="false" />\n        <bool name="bEqual" value="false" refParamName="" useRefParam="false" />')
+		            number_of_replacements = replace_text(file_path, '<Track trackName="TriggerParticleTick1" eventType="TriggerParticleTick" guid="a07302eb-cb3b-4146-9996-d018f92247aa" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">', '<Track trackName="TriggerParticleTick1" eventType="TriggerParticleTick" guid="a07302eb-cb3b-4146-9996-d018f92247aa" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">')
+		            number_of_replacements = replace_text(file_path, 'GongBenWuZang_attack01_spell01_2', 'GongBenWuZang_attack01_spell01_1')
 		        elif file_path.endswith("S22.xml"):
-		            replace_text(o + file_path, '<int name="skinId" value="13011" refParamName="" useRefParam="false" />\n        <bool name="bEqual" value="true" refParamName="" useRefParam="false" />', '<int name="skinId" value="99911" refParamName="" useRefParam="false" />\n        <bool name="bEqual" value="false" refParamName="" useRefParam="false" />')
-		            replace_text(o + file_path, '<Track trackName="TriggerParticleTick1" eventType="TriggerParticleTick" guid="a07302eb-cb3b-4146-9996-d018f92247aa" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">', '<Track trackName="TriggerParticleTick1" eventType="TriggerParticleTick" guid="a07302eb-cb3b-4146-9996-d018f92247aa" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">')
-		            replace_text(o + file_path, 'GongBenWuZang_attack01_spell01_3', 'GongBenWuZang_attack01_spell01_2')
+		            number_of_replacements = replace_text(file_path, '<int name="skinId" value="13011" refParamName="" useRefParam="false" />\n        <bool name="bEqual" value="true" refParamName="" useRefParam="false" />', '<int name="skinId" value="99911" refParamName="" useRefParam="false" />\n        <bool name="bEqual" value="false" refParamName="" useRefParam="false" />')
+		            number_of_replacements = replace_text(file_path, '<Track trackName="TriggerParticleTick1" eventType="TriggerParticleTick" guid="a07302eb-cb3b-4146-9996-d018f92247aa" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">', '<Track trackName="TriggerParticleTick1" eventType="TriggerParticleTick" guid="a07302eb-cb3b-4146-9996-d018f92247aa" enabled="false" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">')
+		            number_of_replacements = replace_text(file_path, 'GongBenWuZang_attack01_spell01_3', 'GongBenWuZang_attack01_spell01_2')
 		
 		    for file_path in os.listdir(o):
-		        replace_text(o + file_path, 'prefab_skill_effects/hero_skill_effects/130_GongBenWuZang/', 'prefab_skill_effects/hero_skill_effects/130_GongBenWuZang/13011/')
-		        replace_text(o + file_path, '\n        <String name="resourceName" value="prefab_skill_effects/hero_skill_effects/', '\n        <int name="frameRate" value="1.080.000" refParamName="" useRefParam="false" />\n        <bool name="bUseTargetSkinEffect" value="true" refParamName="" useRefParam="false"/>\n        <String name="resourceName" value="prefab_skill_effects/hero_skill_effects/')
-		        replace_text(o + file_path, '\n        <String name="clipName" value="', '\n        <int name="frameRate" value="1.080.000" refParamName="" useRefParam="false" />\n        <String name="clipName" value="')
+		        number_of_replacements = replace_text(file_path, 'prefab_skill_effects/hero_skill_effects/130_GongBenWuZang/', 'prefab_skill_effects/hero_skill_effects/130_GongBenWuZang/13011/')
+		        number_of_replacements = replace_text(file_path, '\n        <String name="resourceName" value="prefab_skill_effects/hero_skill_effects/', '\n        <int name="frameRate" value="1.080.000" refParamName="" useRefParam="false" />\n        <bool name="bUseTargetSkinEffect" value="true" refParamName="" useRefParam="false"/>\n        <String name="resourceName" value="prefab_skill_effects/hero_skill_effects/')
+		        number_of_replacements = replace_text(file_path, '\n        <String name="clipName" value="', '\n        <int name="frameRate" value="1.080.000" refParamName="" useRefParam="false" />\n        <String name="clipName" value="')
 		
 		        ID = b'_Skin11'
 		        File = os.listdir(o)
