@@ -446,7 +446,7 @@ if player=="3":
 	                opt = "-d"
 	                input_blob = input_blob[pos:]
 	            else:
-	                opt = "-d"
+	                opt = "-c"
 	        zstd_mode = None
 	        try:
 	            if opt in ("-d", "--compress"):
