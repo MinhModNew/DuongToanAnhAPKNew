@@ -446,10 +446,10 @@ if player=="3":
 	                opt = "-d"
 	                input_blob = input_blob[pos:]
 	            else:
-	                opt = "-c"
+	                opt = "-d"
 	        zstd_mode = None
 	        try:
-	            if opt in ("-c", "--compress"):
+	            if opt in ("-d", "--compress"):
 	                zstd_mode = "compress"
 	                output_blob = bytearray(pyzstd.compress(input_blob, ZSTD_LEVEL, pyzstd.ZstdDict(ZSTD_DICT, True)))
 	
