@@ -967,57 +967,58 @@ if player =="4":
 		    with open(o+file,'wb') as f:f.write(Rpl)
 		    input('Xong')
 		    print("\33[1;31m\\"+"—"*58+"/\n" + Fore.RESET)
-		if fixskin=='2':
-			print("\033[96m Krixi Phù Thủy Thời Không🐧")
-			def replace_text(file_path, old_text, new_text):
-			  with open(o+'/'+file_path, "rb") as f:
-			    text = f.read()
-			  text = text.replace(old_text.encode(), new_text.encode())
-			  with open(o+'/'+file_path, "wb") as f:
-			    f.write(text)
-			if __name__ == "__main__":
-			  o = input("Nhập Thư Mục: ")
-			  print("\033[96m Xong")
-			  for file_path in os.listdir(o):
-			      if file_path.endswith("S1.xml"):      
-			            number_of_replacements = replace_text(file_path, '<int name="skinId" value="10620" refParamName="" useRefParam="false" />', '<int name="skinId" value="10699" refParamName="" useRefParam="false" />\n        <bool name="bEqual" value="false" refParamName="" useRefParam="false"/>')
-			      if file_path.endswith("S1B1.xml"):      
-			      	number_of_replacements = replace_text(file_path, '<int name="skinId" value="10620" refParamName="" useRefParam="false" />','<int name="skinId" value="10699" refParamName="" useRefParam="false" />\n        <bool name="bEqual" value="false" refParamName="" useRefParam="false"/>')
-			      if file_path.endswith("S2.xml"):      
-			      	number_of_replacements = replace_text(file_path, '<int name="skinId" value="10620" refParamName="" useRefParam="false" />','<int name="skinId" value="10699" refParamName="" useRefParam="false" />\n        <bool name="bEqual" value="false" refParamName="" useRefParam="false"/>')
-			      if file_path.endswith("S2.xml"):      
-			          number_of_replacements = replace_text(file_path, '<int name="skinId" value="10620" refParamName="" useRefParam="false" />\n        <bool name="bEqual" value="false" refParamName="" useRefParam="false" />','<int name="skinId" value="10699" refParamName="" useRefParam="false" />')
-			      if file_path.endswith("S2B1.xml"):      
-			      	number_of_replacements = replace_text(file_path, '<int name="skinId" value="10620" refParamName="" useRefParam="false" />\n        <bool name="bEqual" value="false" refParamName="" useRefParam="false" />','<int name="skinId" value="10699" refParamName="" useRefParam="false" />')
-			      if file_path.endswith("S2B1.xml"):      
-			          number_of_replacements = replace_text(file_path, '<int name="skinId" value="10620" refParamName="" useRefParam="false" />','<int name="skinId" value="10699" refParamName="" useRefParam="false" />\n        <bool name="bEqual" value="false" refParamName="" useRefParam="false"/>')
-			      if file_path.endswith("U1B0.xml"):      
-			      	number_of_replacements = replace_text(file_path, '<int name="skinId" value="10620" refParamName="" useRefParam="false" />\n        <bool name="bEqual" value="false" refParamName="" useRefParam="false" />','<int name="skinId" value="10699" refParamName="" useRefParam="false" />')
-			      if file_path.endswith("U1B0.xml"):      
-			          number_of_replacements = replace_text(file_path, '<int name="skinId" value="10620" refParamName="" useRefParam="false" />','<int name="skinId" value="10699" refParamName="" useRefParam="false" />\n        <bool name="bEqual" value="false" refParamName="" useRefParam="false"/>')
-			      if file_path.endswith("U1B1.xml"):      
-			      	number_of_replacements = replace_text(file_path, '<int name="skinId" value="10620" refParamName="" useRefParam="false" />','<int name="skinId" value="10699" refParamName="" useRefParam="false" />\n        <bool name="bEqual" value="false" refParamName="" useRefParam="false"/>')
-			      if file_path.endswith("U1E1.xml"):      
-			      	number_of_replacements = replace_text(file_path, '<int name="skinId" value="10620" refParamName="" useRefParam="false" />','<int name="skinId" value="10699" refParamName="" useRefParam="false" />\n        <bool name="bEqual" value="false" refParamName="" useRefParam="false"/>')
-			     
-			  for file_path in os.listdir(o):
-			   number_of_replacements = replace_text(file_path, 'prefab_skill_effects/hero_skill_effects/106_xiaoqiao/', 'prefab_skill_effects/hero_skill_effects/106_xiaoqiao/10620/')
-			   number_of_replacements = replace_text(file_path, '\n        <String name="resourceName" value="prefab_skill_effects/hero_skill_effects/', '\n        <int name="frameRate" value="1.080.000" refParamName="" useRefParam="false" />\n        <bool name="bUseTargetSkinEffect" value="true" refParamName="" useRefParam="false"/>\n        <String name="resourceName" value="prefab_skill_effects/hero_skill_effects/')
-			   number_of_replacements = replace_text(file_path, '\n        <String name="clipName" value="', '\n        <int name="frameRate" value="120" refParamName="" useRefParam="false" />\n        <String name="clipName" value="')
-			   ID=b'_Skin20'
-			File=os.listdir(o)
-			for file in File:
-			    with open(o+file,'rb') as f:rpl=f.readlines()
-			    with open(o+file,'rb') as f:Rpl=f.read()
-			    Code=[]
-			    for i in rpl:
-			        if i.find(b'<String name="eventName" value="') != -1:
-			            Code.append(i[40:i.find(b'" refParamName="" useRefParam="false" />')])
-			    for i in Code:
-			        if Code==[]: pass
-			        else:
-			            Rpl=Rpl.replace(i,i+ID)
-			    with open(o+file,'wb') as f:f.write(Rpl)
+	if fixskin=='2':
+		print("\033[96m Krixi Phù Thủy Thời Không🐧")
+		def replace_text(file_path, old_text, new_text):
+		  with open(o+'/'+file_path, "rb") as f:
+		    text = f.read()
+		  text = text.replace(old_text.encode(), new_text.encode())
+		  with open(o+'/'+file_path, "wb") as f:
+		    f.write(text)
+		if __name__ == "__main__":
+		  o = input("Nhập Thư Mục: ")
+		  print("\033[96m Xong")
+		  for file_path in os.listdir(o):
+		      if file_path.endswith("S1.xml"):      
+		            number_of_replacements = replace_text(file_path, '<int name="skinId" value="10620" refParamName="" useRefParam="false" />', '<int name="skinId" value="10699" refParamName="" useRefParam="false" />\n        <bool name="bEqual" value="false" refParamName="" useRefParam="false"/>')
+		      if file_path.endswith("S1B1.xml"):      
+		      	number_of_replacements = replace_text(file_path, '<int name="skinId" value="10620" refParamName="" useRefParam="false" />','<int name="skinId" value="10699" refParamName="" useRefParam="false" />\n        <bool name="bEqual" value="false" refParamName="" useRefParam="false"/>')
+		      if file_path.endswith("S2.xml"):      
+		      	number_of_replacements = replace_text(file_path, '<int name="skinId" value="10620" refParamName="" useRefParam="false" />','<int name="skinId" value="10699" refParamName="" useRefParam="false" />\n        <bool name="bEqual" value="false" refParamName="" useRefParam="false"/>')
+		      if file_path.endswith("S2.xml"):      
+		          number_of_replacements = replace_text(file_path, '<int name="skinId" value="10620" refParamName="" useRefParam="false" />\n        <bool name="bEqual" value="false" refParamName="" useRefParam="false" />','<int name="skinId" value="10699" refParamName="" useRefParam="false" />')
+		      if file_path.endswith("S2B1.xml"):      
+		      	number_of_replacements = replace_text(file_path, '<int name="skinId" value="10620" refParamName="" useRefParam="false" />\n        <bool name="bEqual" value="false" refParamName="" useRefParam="false" />','<int name="skinId" value="10699" refParamName="" useRefParam="false" />')
+		      if file_path.endswith("S2B1.xml"):      
+		          number_of_replacements = replace_text(file_path, '<int name="skinId" value="10620" refParamName="" useRefParam="false" />','<int name="skinId" value="10699" refParamName="" useRefParam="false" />\n        <bool name="bEqual" value="false" refParamName="" useRefParam="false"/>')
+		      if file_path.endswith("U1B0.xml"):      
+		      	number_of_replacements = replace_text(file_path, '<int name="skinId" value="10620" refParamName="" useRefParam="false" />\n        <bool name="bEqual" value="false" refParamName="" useRefParam="false" />','<int name="skinId" value="10699" refParamName="" useRefParam="false" />')
+		      if file_path.endswith("U1B0.xml"):
+			      number_of_replacements = replace_text(file_path, '<int name="skinId" value="10620" refParamName="" useRefParam="false" />','<int name="skinId" value="10699" refParamName="" useRefParam="false" />\n        <bool name="bEqual" value="false" refParamName="" useRefParam="false"/>')
+		      if file_path.endswith("U1B1.xml"):      
+		      	number_of_replacements = replace_text(file_path, '<int name="skinId" value="10620" refParamName="" useRefParam="false" />','<int name="skinId" value="10699" refParamName="" useRefParam="false" />\n        <bool name="bEqual" value="false" refParamName="" useRefParam="false"/>')
+		      if file_path.endswith("U1E1.xml"):      
+		      	number_of_replacements = replace_text(file_path, '<int name="skinId" value="10620" refParamName="" useRefParam="false" />','<int name="skinId" value="10699" refParamName="" useRefParam="false" />\n        <bool name="bEqual" value="false" refParamName="" useRefParam="false"/>')
+		     
+		  for file_path in os.listdir(o):
+		   number_of_replacements = replace_text(file_path, 'prefab_skill_effects/hero_skill_effects/106_xiaoqiao/', 'prefab_skill_effects/hero_skill_effects/106_xiaoqiao/10620/')
+		   number_of_replacements = replace_text(file_path, '\n        <String name="resourceName" value="prefab_skill_effects/hero_skill_effects/', '\n        <int name="frameRate" value="1.080.000" refParamName="" useRefParam="false" />\n        <bool name="bUseTargetSkinEffect" value="true" refParamName="" useRefParam="false"/>\n        <String name="resourceName" value="prefab_skill_effects/hero_skill_effects/')
+		   number_of_replacements = replace_text(file_path, '\n        <String name="clipName" value="', '\n        <int name="frameRate" value="120" refParamName="" useRefParam="false" />\n        <String name="clipName" value="')
+		   ID=b'_Skin20'
+		File=os.listdir(o)
+		for file in File:
+		    with open(o+file,'rb') as f:rpl=f.readlines()
+		    with open(o+file,'rb') as f:Rpl=f.read()
+		    Code=[]
+		    for i in rpl:
+		        if i.find(b'<String name="eventName" value="') != -1:
+		            Code.append(i[40:i.find(b'" refParamName="" useRefParam="false" />')])
+		    for i in Code:
+		        if Code==[]: pass
+		        else:
+		            Rpl=Rpl.replace(i,i+ID)
+		    with open(o+file,'wb') as f:f.write(Rpl)
+	         
 	if fixskin =='3':
 		time.sleep(2)
 		print("\033[93m Airi Bích Hải Thánh Nữ")
