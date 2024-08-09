@@ -892,6 +892,40 @@ if player=="3":
 	    shutil.rmtree(f'{sanitized_input}/[Files_Mod]/files/Resources/1.55.1/Ages/Prefab_Characters/Prefab_Hero/mod1/')
 	except Exception as e:
 	    print(e)
+	# Nội dung cần thay thế
+	original_text = """</Event>
+	    </Track>
+	  </Action>
+	</Project>"""
+	
+	# Chuỗi thay thế
+	replacement_text = """</Event>
+	    </Track>
+	    <Track trackName="HitTriggerTick1" eventType="HitTriggerTick" guid="EricTV" enabled="true" useRefParam="false" refParamName="" r="0.000" g="0.000" b="0.000" execOnForceStopped="false" execOnActionCompleted="false" stopAfterLastEvent="true">
+	      <Event eventName="HitTriggerTick" time="0.000" isDuration="false" guid="EricTV">
+	        <TemplateObject name="targetId" id="0" objectName="self" isTemp="false" refParamName="" useRefParam="false" />
+	        <int name="SelfSkillCombineID_1" value="167001" refParamName="" useRefParam="false" />
+	        <TemplateObject name="triggerId" id="-1" objectName="None" isTemp="false" refParamName="" useRefParam="false" />
+	      </Event>
+	    </Track>
+	  </Action>
+	</Project>"""
+	
+	# Đường dẫn đến file back.xml trong thư mục commonresource
+	file_path = 'commonresource/back.xml'
+	
+	# Đọc nội dung từ file
+	with open(file_path, 'r', encoding='utf-8') as file:
+	    content = file.read()
+	
+	# Thay thế nội dung
+	modified_content = content.replace(original_text, replacement_text)
+	
+	# Ghi lại nội dung đã thay thế vào file
+	with open(file_path, 'w', encoding='utf-8') as file:
+	    file.write(modified_content)
+	
+	print("Hoàn tất thay thế!")
 	##################################################################################
 if player =="4":
 	time.sleep(0.5)
@@ -1376,7 +1410,8 @@ if player=='5':
 	        # Sử dụng str.join để kết hợp các số thành một chuỗi
 	        result_str = ' '.join(map(str, results))
 	
-	
+
+
 	
 	    IDD = result_str
 	    IDMODSKIN=IDD.split()
