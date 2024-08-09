@@ -443,10 +443,10 @@ if player=="3":
 	        else:
 	            pos = input_blob.find(b"\x28\xb5\x2f\xfd")
 	            if pos != -1:
-	                opt = "-d"
+	                opt = "-c"
 	                input_blob = input_blob[pos:]
 	            else:
-	                opt = "-d"
+	                opt = "-c"
 	        zstd_mode = None
 	        try:
 	            if opt in ("-d", "--compress"):
